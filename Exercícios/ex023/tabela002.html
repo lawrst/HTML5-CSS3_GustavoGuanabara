@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabelas</title>
     <style>
-      thead,
-      tfoot {
-        background-color: rgba(86, 86, 86, 0.801);
-        color: white;
+      td,
+      th {
+        border: 1px solid black;
+        padding: 10px;
       }
 
       caption {
@@ -16,6 +16,12 @@
         font-weight: bold;
         padding: 10px;
         background-color: lightgray;
+      }
+
+      thead,
+      tfoot {
+        background-color: rgba(86, 86, 86, 0.801);
+        color: white;
       }
 
       body {
@@ -27,10 +33,10 @@
         border-collapse: collapse;
       }
 
-      td,
-      th {
-        border: 1px solid black;
-        padding: 10px;
+      thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: rgb(86, 86, 86);
       }
 
       tbody > tr:nth-child(odd) {
